@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="iriksit" translate="label" sortOrder="501" class="iriksit">
+            <label>IriksIT</label>
+        </tab>
+        <section id="iriksit_whereami" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10"
+                 translate="label">
+            <label>Where Am I ?</label>
+            <tab>iriksit</tab>
+            <resource>IriksIT_WhereAmI::config_iriksit_whereami</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label"
+                       type="select" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="environment" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20"
+                       translate="label" type="select" canRestore="1">
+                    <label>Environment</label>
+                    <comment>
+                        Note: If you set it to custom it will display another field.
+                    </comment>
+                    <depends>
+                        <field id="*/*/enabled">1</field>
+                    </depends>
+                    <source_model>IriksIT\WhereAmI\Model\Config\Source\Environment</source_model>
+                </field>
+                <field id="custom_label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30"
+                       translate="label" type="text" canRestore="1">
+                    <label>Custom label</label>
+                    <comment>
+                        Note: What if, this isn't local/staging/upgrade/release or live?
+                        You can put in a custom label here!
+                    </comment>
+                    <depends>
+                        <field id="*/*/environment">5</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

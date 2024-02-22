@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <iriksit_whereami>
+            <general>
+                <enabled>0</enabled>
+                <environment>0</environment>
+                <custom_label>Custom label</custom_label>
+            </general>
+        </iriksit_whereami>
+    </default>
+</config>

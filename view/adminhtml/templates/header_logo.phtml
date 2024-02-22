@@ -1,0 +1,55 @@
+<?php
+$helper = $this->helper(\IriksIT\WhereAmI\Helper\Environment::class);
+if ($helper->IsEnabled()) {
+    $label = '';
+    $rotate = 1;
+    switch ($helper->WhatEnvironment()) {
+        case 0:
+            $label = 'Local';
+            $rotate = 291;
+            break;
+        case 1:
+            $label = 'Staging';
+            $rotate = 180;
+            break;
+        case 2:
+            $label = 'Upgrade';
+            $rotate = 75;
+            break;
+        case 3:
+            $label = 'Release';
+            $rotate = 245;
+            break;
+        case 5:
+            $label = $helper->GetCustomLabel();
+            $rotate = 291;
+            break;
+        case 4:
+        default:
+            $label = 'Live';
+            break;
+    }
+    ?>
+    <style>
+        a.logo {
+            filter: hue-rotate(<?= /* @noEscape */ $rotate ?>deg);
+            padding: 1.7rem 0 3.4rem !important;
+            height: 9.2rem !important;
+        }
+
+        a.logo::after {
+            content: "<?= /* @noEscape */ $label ?>";
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 88px;
+            color: #E85D22;
+        }
+
+        header.login-header a.logo::after {
+            width: 288px;
+            padding-left: 60px;
+            top: 20px;
+        }
+    </style>
+<?php } ?>
