@@ -1,5 +1,10 @@
 # Mage2 Module - Where Am I
 
+![Static Badge]([https://img.shields.io/badge/compatible-compatible?style=for-the-badge&label=Hyv%C3%A4&labelColor=%230A144B&color=%230A23B9%20](https://img.shields.io/badge/compatible-compatible?style=for-the-badge&label=Magento2.4.6-p4&labelColor=%230A144B&color=%230A23B9%20))
+[![Packagist](https://img.shields.io/packagist/v/iriks-it/module-whereami?style=for-the-badge)](https://packagist.org/packages/iriks-it/module-whereami)
+[![Packagist](https://img.shields.io/packagist/dt/iriks-it/module-whereami?style=for-the-badge)](https://packagist.org/packages/iriks-it/module-whereami)
+[![Packagist](https://img.shields.io/packagist/dm/iriks-it/module-whereami?style=for-the-badge)](https://packagist.org/packages/iriks-it/module-whereami)
+
 `iriks-it/module-whereami`
 
 - [Main Functionalities](#markdown-header-main-functionalities)
