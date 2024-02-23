@@ -1,11 +1,11 @@
-name: Codesniffer with the Magento Coding standard
+name: Codesniffer with the Magento EcgM2 standard
 on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Run codesniffer
         run:
@@ -13,3 +13,4 @@ jobs:
           --volume $(pwd)/:/app/workdir
           michielgerritsen/magento-coding-standard:latest
           --severity=6
+          -s

@@ -1,4 +1,5 @@
 <?php
+// @codingStandardsIgnoreFile
 /**
  * Copyright ©  All rights reserved.
  * See COPYING.txt for license details.

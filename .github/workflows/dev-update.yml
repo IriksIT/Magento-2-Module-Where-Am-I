@@ -1,0 +1,19 @@
+name: Auto merge production to dev
+on:
+  push:
+    branches:
+      - production
+jobs:
+  merge-branch:
+    name: Auto Merge
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Merge production -> develop
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: production
+          target_branch: dev
+          message: AUTO Merge production into develop
+          github_token: ${{ secrets.MERGE_TOKEN }}
