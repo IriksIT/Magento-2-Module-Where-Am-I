@@ -1,5 +1,7 @@
 <?php
-$helper = $this->helper(\IriksIT\WhereAmI\Helper\Environment::class);
+// @codingStandardsIgnoreFile
+/** @var $helper \IriksIT\WhereAmI\Helper\Environment */
+$helper = $this->helper('IriksIT\WhereAmI\Helper\Environment');
 if ($helper->IsEnabled()) {
     $label = '';
     $rotate = 1;
