@@ -1,4 +1,4 @@
-name: Codesniffer with the Magento Coding standard
+name: Codesniffer with the Magento EcgM2 standard
 on: [push, pull_request]
 
 jobs:
@@ -13,3 +13,4 @@ jobs:
           --volume $(pwd)/:/app/workdir
           michielgerritsen/magento-coding-standard:latest
           --severity=6
+          -s
