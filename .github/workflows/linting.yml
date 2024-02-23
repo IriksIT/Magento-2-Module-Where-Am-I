@@ -2,10 +2,6 @@ name: Lint PHP files
 on: [push, pull_request]
 
 jobs:
-  php-80:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: prestashop/github-action-php-lint/8.0@v2.1
   php-81:
     runs-on: ubuntu-latest
     steps:
